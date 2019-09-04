@@ -53,6 +53,8 @@ void KalmanFilter::Update(const VectorXd &z) {
   P_ = (I - K * H_) * P_;
 }
 
+// For definition of PI I used stackoverflow
+// https://stackoverflow.com/questions/1727881/how-to-use-the-pi-constant-in-c
 static float getPI() {
   static float PI = std::atan(1.0) * 4.0;
   return PI;
